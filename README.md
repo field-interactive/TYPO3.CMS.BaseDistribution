@@ -10,7 +10,7 @@ Get going quickly with TYPO3 CMS.
 
 ## Quickstart
 
-* `migraw exec "composer create-project field-interactive/cms-base-distribution project-name ^11"`
+* `migraw exec "composer create-project field-interactive/cms-base-distribution project-name ^11.x-dev"`
 * `cd project-name`
 
 
