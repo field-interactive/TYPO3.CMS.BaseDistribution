@@ -6,13 +6,24 @@ Get going quickly with TYPO3 CMS.
 
 * PHP 8.1
 * [Composer](https://getcomposer.org/download/)
+* [Migraw](https://github.com/marcharding/migraw)
 
 ## Quickstart
 
-* `composer create-project typo3/cms-base-distribution project-name ^12`
+* `migraw exec "composer create-project field-interactive/cms-base-distribution project-name ^12.x-dev"`
 * `cd project-name`
 
-### Setup
+
+### Development server
+
+First, configure your migraw.yaml and update the name and host. The following command starts the development web server with migraw, installs all dependencies and runs the ``typo3 setup`` command automatically.
+
+````bash
+migraw up
+````
+
+
+### (Re-) Run the Setup
 
 To start an interactive installation, you can do so by executing the following
 command and then follow the wizard:
@@ -42,18 +53,6 @@ composer exec -- typo3 setup \
     --project-name="My TYPO3 Project" \
     --create-site="https://localhost/"
 ```
-
-### Development server
-
-While it's advised to use a more sophisticated web server such as
-Apache 2 or Nginx, you can instantly run the project by using PHPs` built-in
-[web server](https://secure.php.net/manual/en/features.commandline.webserver.php).
-
-* `TYPO3_CONTEXT=Development php -S localhost:8000 -t public`
-* open your browser at "http://localhost:8000"
-
-Please be aware that the built-in web server is single threaded and only meant
-to be used for development.
 
 ## License
 

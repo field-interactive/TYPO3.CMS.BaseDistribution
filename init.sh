@@ -4,6 +4,6 @@ trap 'echo -e "\e[0;32m" && echo -ne $(date "+%Y-%m-%d %H:%M:%S") && echo " >> E
 mysql -h127.0.0.1 -uroot -e "CREATE DATABASE application"
 
 composer install
-composer exec typo3cms install:setup
+composer exec typo3 setup
 
 trap - DEBUG
